@@ -60,7 +60,7 @@ public class SMTPServer
 	private AuthenticationHandlerFactory authenticationHandlerFactory;
 	private ExecutorService executorService;
 
-	private final CommandHandler commandHandler;
+	private CommandHandler commandHandler;
 
 	/** The thread listening on the server socket. */
 	@GuardedBy("this")
@@ -415,6 +415,10 @@ public class SMTPServer
 	public CommandHandler getCommandHandler()
 	{
 		return this.commandHandler;
+	}
+	
+	public void setCommandHandler(CommandHandler commandHandler) {
+	    this.commandHandler = commandHandler;
 	}
 
 	/** */

@@ -114,7 +114,7 @@ public class CommandHandler
 	}
 
 	/** */
-	private Command getCommandFromString(String commandString)
+	public Command getCommandFromString(String commandString)
 		throws UnknownCommandException, InvalidCommandNameException
 	{
 		Command command = null;
